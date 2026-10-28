@@ -2,11 +2,7 @@
 
 def find_the_redheads(param):
     # filtered = [ k for k, v in param.items() if v == 'red']
-    filtered = list(map(lambda item: item[0],
-                        filter(lambda item: item[1] == 'red', param.items())))
-    return filtered
-
-
+    return list(filter(lambda name: param[name] == "red", param.keys()))
 
 dupont_family = {
     "florian": "red",

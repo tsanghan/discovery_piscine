@@ -18,7 +18,7 @@ if len(sys.argv) != 3:
     print("none")
 else:
     result = len(re.findall(sys.argv[1], sys.argv[2]))
-    if result != 2:
+    if result == 0:
        print("none")
     else:
         print(result)

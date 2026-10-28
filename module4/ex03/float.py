@@ -18,5 +18,5 @@ try:
     else:
         print("This number is an decimal.")
 except ValueError:
-    print(f"could not convert string to float.")
+    print(f"Could not convert string to float.")
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 def average(param):
-    return sum([v for k, v in param.items()])/len(param)
+    return sum([v for _, v in param.items()])/len(param)
 
 class_3B = {
     "marine": 18,

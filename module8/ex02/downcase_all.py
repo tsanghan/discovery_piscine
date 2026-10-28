@@ -2,7 +2,7 @@
 
 import sys
 
-def downcase_it(param: str) -> str:
+def downcase_it(param):
     return param.lower()
 
 if len(sys.argv) < 2:

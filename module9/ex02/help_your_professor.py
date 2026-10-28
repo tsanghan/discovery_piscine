@@ -17,5 +17,10 @@ class_3C = {
     "stephanie": 13
 }
 
-print(f"Average for class 3B: {average(class_3B)}.")
-print(f"Average for class 3C: {average(class_3C)}.")
+class_average = [
+    ('3B', average(class_3B)),
+    ('3C', average(class_3C))
+]
+
+for item in class_average:
+    print(f"Average for class {item[0]}: {item[1]}.")

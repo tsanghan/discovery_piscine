@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-def average(param):
+def average(param: dict[str, int]):
     return sum([v for _, v in param.items()])/len(param)
 
 class_3B = {

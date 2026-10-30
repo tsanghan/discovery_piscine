@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-def array_of_names(param):
+def array_of_names(param: dict[str, str]):
     # name_list = []
     # for key, value in param.items():
     #     name_list.append(f"{key.capitalize()} {value.capitalize()}")

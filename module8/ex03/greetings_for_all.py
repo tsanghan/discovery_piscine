@@ -2,7 +2,7 @@
 
 import numbers
 
-def greetings(name="noble stranger"):
+def greetings(name: str="noble stranger"):
     if isinstance(name, numbers.Number):
         print("Error! It was not a name.")
     else:

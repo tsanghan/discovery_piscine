@@ -2,7 +2,9 @@
 
 import sys
 
-if len(sys.argv) - 1 != 1:
-    print("none")
-else:
-    print(sys.argv[1].lower())
+# if len(sys.argv) - 1 != 1:
+#     print("none")
+# else:
+#     print(sys.argv[1].lower())
+
+print("none") if len(sys.argv) - 1 != 1 else print(sys.argv[1].lower())

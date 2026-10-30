@@ -17,10 +17,13 @@ class_3C = {
     "stephanie": 13
 }
 
-class_average = [
-    ('3B', average(class_3B)),
-    ('3C', average(class_3C))
-]
+print(f"Average for class 3B: {average(class_3B)}.")
+print(f"Average for class 3C: {average(class_3C)}.")
 
-for item in class_average:
-    print(f"Average for class {item[0]}: {item[1]}.")
+# class_average = [
+#     ('3B', average(class_3B)),
+#     ('3C', average(class_3C))
+# ]
+
+# for class_name, average in class_average:
+#     print(f"Average for class {class_name}: {average}.")

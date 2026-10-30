@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 def famous_births(param):
-    sorted_param = sorted(param.items(), key=lambda item: item[1]['date_of_birth'])
+    sorted_param = sorted(param.items(), key=lambda lambda_param: lambda_param[1]['date_of_birth'])
     for item in sorted_param:
         print(f"{item[1]['name']} is a great scientist born in {item[1]['date_of_birth']}")
 

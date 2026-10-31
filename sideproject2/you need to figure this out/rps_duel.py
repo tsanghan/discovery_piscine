@@ -29,9 +29,10 @@ def main():
         players[input(f"What is Player{number+1}'s name? ")] = []
 
     for round in range(0,3):
-        print('#' * 80)
-        print(f"Round {round}")
         players_choice: list[str] = []
+        print('#' * 80)
+        print(f"Round {round+1}")
+
         for number in range(0,2):
             try:
                 while player_choice := getpass(f"Player {list(players.keys())[number]} "

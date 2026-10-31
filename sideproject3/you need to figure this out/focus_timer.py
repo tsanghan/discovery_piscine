@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import time
-import subprocess
 import os
+import subprocess
+import time
 
 columns, lines = os.get_terminal_size()
 
@@ -20,10 +20,10 @@ def main():
 
     try:
         minutes = int(minutes)
-        subprocess.run("clear")
+        subprocess.run("clear", check=False)
         print('\n' * (int(lines)//2))
         countdown(minutes * 60)
-        subprocess.run("clear")
+        subprocess.run("clear", check=False)
         print("Time's up! Take a break!")
     except ValueError:
         print("You enter a string, not a number. Please enter a number.")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-from getpass import getpass
 import sys
+from getpass import getpass
 
 player1_wins = [
     ('r','s'),
@@ -17,7 +17,6 @@ players_draw = [
 
 choice_question_str = 'what is your choice? r=Rock, p=Paper, or s=Scissors\n'
 
-
 def add_and_print(players: dict[str, list[int]], round: int, number: int):
     players[list(players.keys())[number]].append(1)
     print(f"Rount {round}: Player {list(players.keys())[number]} wins!!")
@@ -25,15 +24,15 @@ def add_and_print(players: dict[str, list[int]], round: int, number: int):
 def main():
     ''' main() '''
     players: dict[str, list[int]] = {}
-    for number in range(0,2):
+    for number in range(2):
         players[input(f"What is Player{number+1}'s name? ")] = []
 
-    for round in range(0,3):
+    for round in range(3):
         players_choice: list[str] = []
         print('#' * 80)
         print(f"Round {round+1}")
 
-        for number in range(0,2):
+        for number in range(2):
             try:
                 while player_choice := getpass(f"Player {list(players.keys())[number]} "
                                             f"{choice_question_str}")[0].lower():
@@ -41,7 +40,7 @@ def main():
                         players_choice.append(player_choice)
                         break
             except IndexError:
-                print(f"Please only enter 'r', 'p' or 's'.")
+                print("Please only enter 'r', 'p' or 's'.")
                 sys.exit()
 
         # if tuple(players_choice) in player1_wins:
@@ -59,8 +58,8 @@ def main():
             case _:
                 add_and_print(players, round, 1)
 
-    player1_name, player2_name = tuple(list(players.keys()))
-    player1_score, player2_score = map(sum, tuple(list(players.values())))
+    player1_name, player2_name = tuple(players.keys())
+    player1_score, player2_score = map(sum, tuple(players.values()))
 
     print(f"{'#' * 80}\nGrand Finale!!")
     print(f"Player {player1_name} scored {player1_score}\n"

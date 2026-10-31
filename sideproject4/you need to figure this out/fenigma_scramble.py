@@ -4,6 +4,7 @@ from os import unlink
 from pathlib import Path
 from random import choice, sample
 
+
 def load_a_word(min_len: int = 10, max_len: int = 15,
                dict_path: str = "/usr/share/dict/words") -> str:
     """Return a word whose length is between min_len and max_len."""
